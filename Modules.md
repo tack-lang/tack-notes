@@ -47,3 +47,28 @@ mod program;
 
 // CONSTANT is valid in this scope.
 ```
+When an item isn't exported, it can be accessed by the same module, and submodules:
+```
+// file1.tck
+mod program;
+
+const GLOBAL_THING = 5;
+
+// file2.tck
+mod program.part.of.program;
+
+// program.GLOBAL_THING can be accessed here.
+```
+In order for modules to be accessed outside of their direct parents, it must be exported:
+```
+// file1.tck
+mod program;
+
+exp const GLOBAL_THING = 5;
+
+// file2.tck
+mod otherprogram;
+
+// ERROR: module 'program' is not exported
+imp program.GLOBAL_THING;
+```
