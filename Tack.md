@@ -1,0 +1,1 @@
+Tack is a WIP programming language inspired by Rust, Swift, and Zig. Even these informal docs are a WIP.
