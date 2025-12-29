@@ -1,6 +1,6 @@
 This is a basic primer in Tack's syntax, not an in-depth explanation. For a formal grammar, see [formal.ebnf](https://github.com/tack-lang/tackc/tree/master/crates/tackc_parser/formal.ebnf).
 
-Every Tack file must start with a `mod` statement. For an explanation of the module system, see [[Module System]].
+Every Tack file must start with a `mod` statement. For an explanation of the module system, see [[Modules]].
 `mod path.to.module;`
 
 ## Function declarations
